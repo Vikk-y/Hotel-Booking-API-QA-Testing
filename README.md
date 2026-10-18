@@ -46,9 +46,9 @@ This repository contains my QA testing artifacts and documentation.
 
 ## Test Artifacts
 
+- Checklist
 - Test cases
 - Bug reports
-- Postman collection
 
 ## Defects Found
 
