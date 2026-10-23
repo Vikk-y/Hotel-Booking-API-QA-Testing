@@ -2,18 +2,9 @@
 
 ## Overview
 
-Manual API testing project completed as part of a QA home task.
+Manual API testing completed as part of a QA home task.
 
 The project focuses on functional testing of a REST API for a hotel booking system using Postman.
-
-## Source Repository
-
-The API used for testing was provided as part of the original QA home task:
-
-[Hotel Booking API — Original Repository](https://github.com/Zunft-Inc/qa-home-task)
-
-The source repository contains the API implementation and task requirements.
-This repository contains my QA testing artifacts and documentation.
 
 ## Testing Scope
 
@@ -44,15 +35,49 @@ This repository contains my QA testing artifacts and documentation.
 - Partial password validation
 - Authentication response validation
 
+**Test cases:** 15  
+**Bug reports:** 2  
+**Checklist:** Login API checklist
+
+### Reservations
+
+- Get all reservation IDs
+- Filter reservations by first name and last name
+- Filter reservations by first name or last name
+- Filter reservations by check-in and check-out dates
+- Invalid check-in date format validation
+- Get reservation by valid ID
+- Handle non-existing and invalid reservation IDs
+- Get reservation in XML format
+
+**Test cases:** 11  
+**Bug reports:** 4  
+**Checklist:** Reservations API checklist
+
 ## Test Artifacts
 
-- Checklist
+- Checklists
 - Test cases
 - Bug reports
 
 ## Defects Found
 
-During testing, several defects were identified, including:
+During testing, 6 defects were identified, including:
+
+### Authentication
 
 - Incorrect HTTP status code returned for invalid login credentials
 - Authentication bypass caused by acceptance of a partial password
+
+### Reservations
+
+- Last name filter returns an empty result
+- First name and last name filter returns an empty result
+- Check-out date filter excludes reservations matching the specified date
+- Invalid check-in date format is accepted instead of returning HTTP 400
+
+## Project Summary
+
+**Total test cases:** 26  
+**Total bug reports:** 6  
+**Checklists:** 2
